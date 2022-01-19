@@ -1,0 +1,50 @@
+
+/*global text color*/
+$text-cl: #fff;
+$text-black-cl: #000;
+
+/*global bg color*/
+$main-cl:#fff;
+$from-cl: #020935;
+$to-cl: #000E46;
+// 001126 logo color
+// block rotate
+$bg-rotate:135deg;
+// timing transition
+$t: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+/*font families*/
+$font-stack: "Open Sans", sans-serif;
+$font-main: pr;
+
+/*headings typo*/
+$fz-text: 16px;
+$lh-text: normal;
+
+$fz-text-m: 16px;
+$lh-text-m: normal;
+/*main padding*/
+$main-padding:15px 0;
+
+//============================================================//
+
+/*BOXED LAYOUT*/
+$container-max-width: 1920px;
+$container-width: 1140px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
+
+/*GRID - media queries breakpoints*/
+
+
+
+$sm-min: 576px; // CÓ THỂ TÙY CHỈNH
+$md-min: 768px; // KHÔNG THAY ĐỔI
+$lg-min: 992px; // KHÔNG THAY ĐỔI
+$xl-min: 1200px; // KHÔNG THAY ĐỔI
+$xxl-min: 1600px; // CÓ THỂ TÙY CHỈNH
+
+$sm-max: ($sm-min - 1); // Small Mobile
+$md-max: ($md-min - 1); // Mobile
+$lg-max: ($lg-min - 1); // Tablet
+$xl-max: ($xl-min - 1); // Desktop
+$xxl-max: ($xxl-min - 1); // Large Desktop
