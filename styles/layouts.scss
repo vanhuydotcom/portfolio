@@ -16,7 +16,6 @@ body {
     width: 100%;
     max-width: $container-max-width;
     margin: auto;
-    padding: $main-padding;
     @include text($fz-text, $font-main, $lh-text, $text-black-cl, none);
     background: $main-cl;
     scroll-behavior: smooth;

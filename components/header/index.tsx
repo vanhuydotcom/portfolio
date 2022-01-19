@@ -1,15 +1,31 @@
+import React, { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
+/**
+ * Components
+ */
+import NavBar from "./navBar"
+
+
+
+
 const Header = () => {
+
+    const [openNavBar, setOpenNavBar] = useState(false)
+
     return (
-        <header className="header container-fluid">
-            <Link href="/">
-                <a className="header__logo">
-                    <img src="/images/logo/logo.svg" alt="" />
-                </a>
-            </Link>
-            <button className="header__menu"><span>Me</span><span>nu</span></button>
-        </header>
+        <>
+            <header className="header container-fluid">
+                <Link href="/">
+                    <a className={openNavBar ? "header__logo active" : "header__logo"}>
+                        <img src="/images/logo/logo.png" alt="" />
+                    </a>
+                </Link>
+                <button className={openNavBar ? "header__menu active" : "header__menu"} onClick={() => { setOpenNavBar(!openNavBar) }}>
+                    <span>Me</span><span>nu</span>
+                </button>
+            </header>
+            <NavBar open={openNavBar} />
+        </>
     )
 }
 
