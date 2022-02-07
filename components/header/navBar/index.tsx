@@ -1,5 +1,3 @@
-
-
 interface INavBarProps {
     open: boolean
 }
