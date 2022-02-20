@@ -18,7 +18,7 @@
             object-fit: cover;
         }
         &.active{
-            background-color:#fff;
+            background-color:$main-cl;
             img{
                 filter: invert(1);
             }
@@ -30,10 +30,10 @@
         outline: none;
         cursor: pointer;
         padding: 20px 0 20px 20px;
-        @include rem(24px);
+        @include rem(20px);
         &.active{
             span{
-                color: #fff;
+                color: $text-cl;
             }
         }
     }
