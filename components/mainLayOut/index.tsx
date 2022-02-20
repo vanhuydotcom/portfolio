@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import Footer from "../footer"
 import Header from "../header"
 
 
@@ -10,6 +11,7 @@ const MainLayOut: FC = ({ children }) => {
             <main className="main">
                 {children}
             </main>
+            <Footer />
         </>
     )
 }

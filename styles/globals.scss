@@ -3,5 +3,6 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 @import "./layouts.scss";
+@import "../components/layout/index.scss";
 @import "../components/header/index.scss";
-@import "../components/header/navBar/index.scss"
+@import "../components/navBar/index.scss"

@@ -3,7 +3,7 @@ import Link from "next/link"
 /**
  * Components
  */
-import NavBar from "./navBar"
+import NavBar from "../navBar"
 
 const Header = () => {
     const [openNavBar, setOpenNavBar] = useState(false)

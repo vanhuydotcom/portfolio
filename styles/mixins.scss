@@ -201,5 +201,5 @@
 }
 
 @mixin rem($px) {
-	font-size:calc($px/$fz-text);
+	font-size:calc($px/$fz-text)+rem;
 }
