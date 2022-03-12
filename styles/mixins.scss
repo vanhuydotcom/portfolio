@@ -6,7 +6,7 @@
 	}
 }
 // desktop
-@mixin xl{
+@mixin xl {
 	@media screen and (max-width: $xl-max) {
 		@content;
 	}
@@ -201,5 +201,5 @@
 }
 
 @mixin rem($px) {
-	font-size:calc($px/$fz-text)+rem;
+	font-size: calc($px/$fz-text) + rem;
 }

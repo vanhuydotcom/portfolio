@@ -4,14 +4,14 @@ import type { AppProps } from 'next/app'
 /**
  *  Component
  */
-import MainLayOut from '../components/mainLayOut'
+import GenericLayOut from '../components/genericLayOut'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <MainLayOut>
+    <GenericLayOut>
       <Component {...pageProps} />
-    </MainLayOut>
+    </GenericLayOut>
   )
 }
 

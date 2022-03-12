@@ -1,15 +1,15 @@
-
 /*global text color*/
 $text-cl: #fff;
 $text-black-cl: #000;
 
 /*global bg color*/
-$main-cl:#fff;
+$main-cl: #000;
+$main-w-cl: #fff;
 $from-cl: #020935;
 $to-cl: #000;
 // 001126 logo color
 // block rotate
-$bg-rotate:135deg;
+$bg-rotate: 135deg;
 // timing transition
 $t: 0.4s;
 $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
@@ -17,32 +17,35 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 /*font families*/
 $font-stack: "Open Sans", sans-serif;
 $font-main: pr;
+$font-sup: fb;
 
 /*headings typo*/
+$h1: 70px;
+$h2: 50px;
+$h3: 20px;
+
 $fz-text: 16px;
 $lh-text: normal;
 
 $fz-text-m: 16px;
 $lh-text-m: normal;
 
-$fz-text-title:70px;
-$lh-text-title:70px;
-$fz-text-title-md:50px;
-$lh-text-title-md:50px;
+$fz-text-title: 70px;
+$lh-text-title: 70px;
+$fz-text-title-md: 50px;
+$lh-text-title-md: 50px;
 
-$fz-text-link:24px;
-$lh-text-link:24px;
-$fz-text-link-md:18px;
-$lh-text-link-md:18px;
+$fz-text-link: 24px;
+$lh-text-link: 24px;
+$fz-text-link-md: 18px;
+$lh-text-link-md: 18px;
 
-$fz-text-footer:20px;
-$lh-text-footer:20px;
-
-
+$fz-text-footer: 20px;
+$lh-text-footer: 20px;
 
 /*main padding*/
-$header-padding:15px 0;
-
+$header-padding: 15px 0;
+$section-padding: 90px 0;
 //============================================================//
 
 /*BOXED LAYOUT*/
@@ -50,8 +53,6 @@ $container-max-width: 1920px;
 $container-width: 1140px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
 
 /*GRID - media queries breakpoints*/
-
-
 
 $sm-min: 576px; // CÓ THỂ TÙY CHỈNH
 $md-min: 768px; // KHÔNG THAY ĐỔI

@@ -3,16 +3,16 @@ import Footer from "../footer"
 import Header from "../header"
 
 
-const MainLayOut: FC = ({ children }) => {
+const GenericLayOut: FC = ({ children }) => {
     return (
-        <>
+        <div className="generic sh">
             <Header />
             <main className="main">
                 {children}
             </main>
             <Footer />
-        </>
+        </div>
     )
 }
 
-export default MainLayOut
+export default GenericLayOut

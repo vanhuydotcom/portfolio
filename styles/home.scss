@@ -1,0 +1,164 @@
+.top {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__intro {
+        font-family: $font-sup;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        &-left,
+        &-right {
+            width: 50%;
+        }
+        h1 {
+            @include rem($h1);
+            text-align: right;
+            line-height: $h1;
+        }
+        h2 {
+            @include rem($h2);
+            text-align: left;
+            line-height: $h2;
+        }
+    }
+    &__scroll {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .line {
+            width: 1px;
+            height: 80px;
+            background-color: #fff;
+            @include animation(expandDown 3s infinite);
+            @include keyframes(expandDown) {
+                0% {
+                    @include transform(scaleY(1));
+                    @include transform-origin(bottom);
+                }
+                50% {
+                    @include transform(scaleY(0));
+                    @include transform-origin(bottom);
+                }
+                51% {
+                    @include transform(scaleY(0));
+                    @include transform-origin(top);
+                }
+                100% {
+                    @include transform(scaleY(1));
+                    @include transform-origin(top);
+                }
+            }
+        }
+        span {
+            text-align: center;
+            @include animation(faceIO 3s infinite);
+            @include keyframes(faceIO) {
+                0% {
+                    opacity: 0.6;
+                }
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+.projects {
+    &__title {
+        @include rem($h3);
+        line-height: $h3;
+        padding-bottom: 50px;
+    }
+    &__item {
+        &-line {
+            position: relative;
+            font-size: 1rem;
+            opacity: 0.4;
+            &::before {
+                position: absolute;
+                content: "";
+                width: calc(100% - 35px);
+                height: 0.5px;
+                background-color: #fff;
+                right: 0;
+                bottom: 50%;
+            }
+        }
+        .project {
+            position: relative;
+            padding: 50px 0 60px 0;
+            width: 100%;
+            // overflow: hidden;
+            &__title {
+                position: relative;
+                z-index: 10;
+                h2 {
+                    font-size: calc(200px + 20 * (100vw - 1025px) / 975);
+                    line-height: 0.88;
+                    font-family: fb;
+                    text-transform: uppercase;
+                    color: #000;
+                    -webkit-text-stroke: 1px hsla(0, 0%, 100%, 0.5);
+                }
+            }
+            &__des {
+                margin: -20px 0 0;
+                font-size: 1rem;
+                line-height: 1;
+                width: 30%;
+                text-align: left;
+            }
+            &__img {
+                position: absolute;
+                width: 80%;
+                right: 0;
+                top: 50%;
+                will-change: transform, opacity;
+                transform: translate3d(30%, -50%, 0) rotate(-3deg);
+                z-index: 1;
+                // opacity: 0;
+                // visibility: hidden;
+                // -webkit-filter: grayscale(1);
+                // filter: grayscale(1);
+
+                opacity: 1;
+                visibility: visible;
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+
+                transition: visibility 0s, all 0.3s ease-in-out;
+                overflow: hidden;
+                &::before {
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    padding-top: 62.42775%;
+                }
+                &-bg {
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    transform-origin: center;
+                    transform: scale3d(1.2, 1.2, 1.2);
+                    transition: all 8s ease-out;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

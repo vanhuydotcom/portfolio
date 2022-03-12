@@ -1,0 +1,6 @@
+.sh {
+    min-height: 100vmin;
+    @include md {
+        min-height: 100vmax;
+    }
+}

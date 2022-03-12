@@ -1,65 +1,66 @@
-.footer{
-    --padding:90px 0;
-    --lineHeight:36px;
+.footer {
+    --padding: 90px 0;
+    --lineHeight: 36px;
     position: relative;
     height: 100%;
     width: 100%;
     display: flex;
     color: $text-cl;
-    &__wrap{
-        padding:var(--padding);
+    &__wrap {
+        padding: var(--padding);
         width: 90%;
         height: 100%;
-        background-image: linear-gradient( 135deg,$from-cl,$to-cl);
         display: flex;
         justify-content: space-around;
-        .menu{
+        .menu {
             display: flex;
             flex-direction: column;
-            a{
+            a {
                 @include rem($fz-text-footer);
                 line-height: var(--lineHeight);
             }
         }
-        .contact{
+        .contact {
             display: flex;
             flex-direction: column;
-            &__info{
+            &__info {
                 margin-bottom: 100px;
-                p,span{
+                p,
+                span {
                     @include rem($fz-text-footer);
                     line-height: var(--lineHeight);
                 }
-                &-email,&-address {
+                &-email,
+                &-address {
                     margin-bottom: 26px;
                 }
             }
-            &__social{
+            &__social {
                 margin-bottom: 100px;
                 display: flex;
                 flex-direction: column;
-                a{
+                a {
                     @include rem($fz-text-footer);
                     line-height: var(--lineHeight);
                 }
             }
-            &__license{
+            &__license {
                 display: flex;
                 flex-direction: column;
-                span{
+                span {
                     @include rem($fz-text-footer);
                     line-height: var(--lineHeight);
                 }
             }
         }
     }
-    &__btt{
-        padding:var(--padding);
+    &__btt {
+        padding: var(--padding);
         position: absolute;
         width: 10%;
         bottom: 0;
         right: 0;
-        &-btn{
+        &-btn {
             cursor: pointer;
             width: 100%;
             display: flex;
@@ -73,18 +74,19 @@
         }
     }
     @include lg {
-        &__wrap{
+        &__wrap {
             width: 100%;
         }
-        &__btt{
+        &__btt {
             display: none;
         }
     }
-    @include md{
-        &__wrap{
-          flex-direction: column;
-          padding-right: 15px;
-          padding-left: 15px;
+    @include md {
+        --padding: 60px 0;
+        &__wrap {
+            flex-direction: column;
+            padding-right: 15px;
+            padding-left: 15px;
         }
     }
 }

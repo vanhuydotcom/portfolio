@@ -3,8 +3,18 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 @import "./layouts.scss";
-@import "../components/mainLayOut/index.scss";
-@import "../components/layout/index.scss";
+@import "./style.scss";
+
+//main layout
+@import "../components/genericLayOut/index.scss";
+
+//element
+@import "../components/element/index.scss";
+
+//component
 @import "../components/header/index.scss";
 @import "../components/footer/index.scss";
-@import "../components/navBar/index.scss"
+@import "../components/navBar/index.scss";
+
+//page
+@import "./home.scss";

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { useState } from "react"
-import LogoSocial from "../layout/LogoSocial"
+import LogoSocial from "../element/LogoSocial"
 
 
 interface INavBarProps {
