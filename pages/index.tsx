@@ -9,32 +9,32 @@ const myProjects: {
       des: "Space T is a Platform connecting Homeowners with prestigious Furniture Companies, with thousands of offers for more than 8000+ Furniture, Decoration, Household products.",
       image: "/images/cover/demo.jpeg"
     },
-    // {
-    //   name: "CFD Shop",
-    //   des: "Online shopping for millions of men's and women's fashion products, electronics, home appliances... Good prices & many offers.",
-    //   image: "/images/cover/demo.jpeg"
-    // },
-    // {
-    //   name: "CFD Circle",
-    //   des: "CFD Circle is a place to practice Front-end Dev and UX/UI Design courses, connect and share experiences with a team of dedicated and experienced instructors.",
-    //   image: "/images/cover/demo.jpeg"
-    // },
-    // {
-    //   name: "GBOX Studio",
-    //   des: "GBOX STUDIOS aim is to create a full service offering clients the highest quality of work with a comprehensive understanding of modern production",
-    //   image: "/images/cover/demo.jpeg"
-    // },
-    // {
-    //   name: "WOODER",
-    //   des: "Have a look at the best quality and luxurious furniture at an affordable price only at Wooder Furniture.",
-    //   image: "/images/cover/demo.jpeg"
-    // }
+    {
+      name: "CFD Shop",
+      des: "Online shopping for millions of men's and women's fashion products, electronics, home appliances... Good prices & many offers.",
+      image: "/images/cover/demo.jpeg"
+    },
+    {
+      name: "CFD Circle",
+      des: "CFD Circle is a place to practice Front-end Dev and UX/UI Design courses, connect and share experiences with a team of dedicated and experienced instructors.",
+      image: "/images/cover/demo.jpeg"
+    },
+    {
+      name: "GBOX Studio",
+      des: "GBOX STUDIOS aim is to create a full service offering clients the highest quality of work with a comprehensive understanding of modern production",
+      image: "/images/cover/demo.jpeg"
+    },
+    {
+      name: "WOODER",
+      des: "Have a look at the best quality and luxurious furniture at an affordable price only at Wooder Furniture.",
+      image: "/images/cover/demo.jpeg"
+    }
 
   ]
 
 export default function Home() {
   return (
-    <div className="container-fluid">
+    <div className="container">
       <section className="top sh">
         <div className="top__intro">
           <div className="top__intro-left">
@@ -72,6 +72,10 @@ export default function Home() {
             )
           })
         }
+      </section>
+
+      <section className="exp pd">
+        <h3 className="exp__title">My Experience</h3>
       </section>
     </div>
   )
