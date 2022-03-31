@@ -32,6 +32,22 @@ const myProjects: {
 
   ]
 
+const myExps: {
+  startDay: string;
+  endDay: string;
+  thumnailImg: string;
+  name: string;
+  description: string;
+}[] = [
+    {
+      startDay: "01.09.2018",
+      endDay: "01.02.2019",
+      thumnailImg: "",
+      name: "GangWhoo Clinic",
+      description: "FE dev",
+    }
+  ]
+
 export default function Home() {
   return (
     <div className="container">
