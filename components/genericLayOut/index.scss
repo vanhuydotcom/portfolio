@@ -9,4 +9,7 @@
     .pd {
         padding: $section-padding;
     }
+    span.txt {
+        @include rem($txt);
+    }
 }

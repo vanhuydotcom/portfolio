@@ -79,7 +79,7 @@
         @include rem($h3);
         line-height: $h3;
         letter-spacing: 3px;
-        padding-bottom: 50px;
+        padding: $title-padding;
         text-transform: uppercase;
     }
     &__item {
@@ -89,7 +89,7 @@
             opacity: 0.4;
             &::before {
                 position: absolute;
-                content: "";
+                content: '';
                 width: calc(100% - 35px);
                 height: 0.5px;
                 background-color: #fff;
@@ -128,8 +128,8 @@
             }
             &__img {
                 position: absolute;
-                width: 65%;
-                right: 10%;
+                width: 60%;
+                right: 15%;
                 top: 50%;
                 will-change: transform, opacity;
                 transform: translate3d(30%, -50%, 0) rotate(-3deg);
@@ -148,7 +148,7 @@
                 overflow: hidden;
                 &::before {
                     display: block;
-                    content: "";
+                    content: '';
                     width: 100%;
                     padding-top: 62.42775%;
                 }
@@ -218,11 +218,81 @@
 }
 
 .exp {
+    --padding__tb-item: 50px 0;
     &__title {
         @include rem($h3);
         line-height: $h3;
         letter-spacing: 3px;
-        padding-bottom: 50px;
+        padding: $title-padding;
         text-transform: uppercase;
+    }
+    &__wrap {
+        &-item {
+            padding: var(--padding__tb-item);
+            border-top: 0.3px solid #e4e4e450;
+            border-bottom: 0.3px solid #e4e4e450;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            &.anti__border {
+                border: none;
+            }
+            .timeline {
+                &__wrap {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .marquee {
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                will-change: transform;
+                outline: 0 !important;
+                -webkit-font-smoothing: antialiased;
+
+                .description {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 20px;
+                    width: auto;
+                    min-width: 100%;
+                    height: 100%;
+                    position: relative;
+                    transform: translateX(0%);
+
+                    div {
+                        display: flex;
+                        width: auto;
+                        white-space: nowrap;
+                        color: hsla(0, 0%, 100%, 0.5);
+                        padding: 0 15px 2px 0;
+                        p {
+                            font-size: calc(30px + 10 * (100vw - 1025px) / 975);
+
+                            // font-family: Ekstra;
+                            font-weight: 100;
+                            line-height: 1.5em;
+                            white-space: nowrap;
+                        }
+                        @include animation(marquee 10s linear infinite);
+                        @include keyframes(marquee) {
+                            0% {
+                                transform: translateX(0%);
+                            }
+                            100% {
+                                transform: translateX(-100%);
+                            }
+                        }
+                    }
+                    span.txt {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
     }
 }

@@ -36,19 +36,48 @@ const myExps: {
   startDay: string;
   endDay: string;
   thumnailImg: string;
-  name: string;
-  description: string;
+  description: {
+    companyName: string;
+    position: string;
+    works: string;
+  }
 }[] = [
+    {
+      startDay: "03.08.2021",
+      endDay: "Current",
+      thumnailImg: "",
+      description: {
+        companyName: "Spcae T",
+        position: "Front End Developer",
+        works: "Build E Commerce, Console, Real time Chat",
+      }
+    },
+    {
+      startDay: "01.02.2021",
+      endDay: "1.07.2021",
+      thumnailImg: "",
+      description: {
+        companyName: "Legia Express",
+        position: "Front End Developer",
+        works: "Build website with wordpress CMS, Create Landing Page",
+      }
+    },
+
     {
       startDay: "01.09.2018",
       endDay: "01.02.2019",
       thumnailImg: "",
-      name: "GangWhoo Clinic",
-      description: "FE dev",
-    }
+      description: {
+        companyName: "GangWhoo Clinic",
+        position: "Front End Developer - Intern",
+        works: "Create Landing Page",
+      }
+    },
+
   ]
 
 export default function Home() {
+
   return (
     <div className="container">
       <section className="top sh">
@@ -67,6 +96,7 @@ export default function Home() {
       </section>
 
       <section className="projects pd">
+
         <h3 className="projects__title">My Projects</h3>
         {
           myProjects.map((elm, i) => {
@@ -89,10 +119,37 @@ export default function Home() {
           })
         }
       </section>
-
       <section className="exp pd">
         <h3 className="exp__title">My Experience</h3>
+        <div className="exp__wrap">
+          {
+            myExps.map((elm, i) => {
+              return (
+                <div className={`exp__wrap-item ${i === 1 ? "anti__border" : ""}`} key={i}>
+                  <div className="timeline">
+                    <div className="timeline__wrap">
+                      <div className="timline__wrap-from"><span className="txt">{elm.startDay}</span></div>
+                      {/* <div className="timline__wrap-to"><span className="txt">{elm.endDay}</span></div> */}
+                    </div>
+                  </div>
+                  <div className="marquee">
+                    <div className="description">
+                      {
+                        Array(4).fill(elm.description).map((des, j) => {
+                          return (
+                            <div key={j}><p><strong>{des?.companyName}</strong> {des?.position} <strong> {des?.works} </strong>...</p></div>
+                          )
+                        })
+                      }
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
       </section>
     </div>
+
   )
 }

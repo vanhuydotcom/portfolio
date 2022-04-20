@@ -16,18 +16,18 @@ $t: 0.4s;
 $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
 /*font families*/
-$font-stack: "Open Sans", sans-serif;
+$font-stack: 'Open Sans', sans-serif;
 $font-main: pr;
 $font-sup: fb;
 
 /*headings typo*/
 $h1: 70px;
 $h2: 50px;
-$h3: 20px;
+$h3: 30px;
+$txt: 32px;
 
 $fz-text: 16px;
 $lh-text: normal;
-
 $fz-text-m: 16px;
 $lh-text-m: normal;
 
@@ -46,7 +46,8 @@ $lh-text-footer: 20px;
 
 /*main padding*/
 $header-padding: 15px 0;
-$section-padding: 90px 0;
+$section-padding: 90px 0 30px 0;
+$title-padding: 0 0 90px 0;
 //============================================================//
 
 /*BOXED LAYOUT*/
