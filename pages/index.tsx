@@ -19,16 +19,6 @@ const myProjects: {
       des: "CFD Circle is a place to practice Front-end Dev and UX/UI Design courses, connect and share experiences with a team of dedicated and experienced instructors.",
       image: "/images/cover/demo.jpeg"
     },
-    {
-      name: "GBOX Studio",
-      des: "GBOX STUDIOS aim is to create a full service offering clients the highest quality of work with a comprehensive understanding of modern production",
-      image: "/images/cover/demo.jpeg"
-    },
-    {
-      name: "WOODER",
-      des: "Have a look at the best quality and luxurious furniture at an affordable price only at Wooder Furniture.",
-      image: "/images/cover/demo.jpeg"
-    }
 
   ]
 
@@ -76,6 +66,45 @@ const myExps: {
 
   ]
 
+const mySkills: {
+  title: string,
+  icon: string
+}[] = [
+    {
+      title: "Reactjs",
+      icon: ""
+    },
+    {
+      title: "Reactjs",
+      icon: ""
+    },
+    {
+      title: "Reactjs",
+      icon: ""
+    },
+    {
+      title: "Reactjs",
+      icon: ""
+    },
+    {
+      title: "Reactjs",
+      icon: ""
+    },
+    {
+      title: "Reactjs",
+      icon: ""
+    },
+    {
+      title: "Reactjs",
+      icon: ""
+    },
+    {
+      title: "Reactjs",
+      icon: ""
+    },
+
+  ]
+
 export default function Home() {
 
   return (
@@ -97,7 +126,7 @@ export default function Home() {
 
       <section className="projects pd">
 
-        <h3 className="projects__title">My Projects</h3>
+        <h3 className="projects__title home__title">My Projects</h3>
         {
           myProjects.map((elm, i) => {
             return (
@@ -120,7 +149,7 @@ export default function Home() {
         }
       </section>
       <section className="exp pd">
-        <h3 className="exp__title">My Experience</h3>
+        <h3 className="exp__title home__title">My Experience</h3>
         <div className="exp__wrap">
           {
             myExps.map((elm, i) => {
@@ -143,6 +172,20 @@ export default function Home() {
                       }
                     </div>
                   </div>
+                </div>
+              )
+            })
+          }
+        </div>
+      </section>
+      <section className="skill pd">
+        <h3 className="skill__title home__title">My Skills</h3>
+        <div className="skill__wrap">
+          {
+            mySkills.map((e, i) => {
+              return (
+                <div className="skill__wrap-item" key={i}>
+                  <p className="name">{e.title}</p>
                 </div>
               )
             })

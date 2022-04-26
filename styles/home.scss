@@ -74,7 +74,7 @@
         }
     }
 }
-.projects {
+.home {
     &__title {
         @include rem($h3);
         line-height: $h3;
@@ -82,6 +82,8 @@
         padding: $title-padding;
         text-transform: uppercase;
     }
+}
+.projects {
     &__item {
         &-line {
             position: relative;
@@ -219,13 +221,13 @@
 
 .exp {
     --padding__tb-item: 50px 0;
-    &__title {
-        @include rem($h3);
-        line-height: $h3;
-        letter-spacing: 3px;
-        padding: $title-padding;
-        text-transform: uppercase;
-    }
+    // &__title {
+    //     @include rem($h3);
+    //     line-height: $h3;
+    //     letter-spacing: 3px;
+    //     padding: $title-padding;
+    //     text-transform: uppercase;
+    // }
     &__wrap {
         &-item {
             padding: var(--padding__tb-item);
@@ -293,6 +295,21 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.skill {
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        &-item {
+            width: 16.629%;
+            height: calc(100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
